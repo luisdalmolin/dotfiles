@@ -10,9 +10,9 @@ else
 fi
 
 # -- Global Ignore -------------------------------------------------------------
-if [[ -L "$HOME/.gitignore_global" ]]; then
-    msg_ok "gitignore_global"
+if [[ -L "$HOME/.gitignore" ]]; then
+    msg_ok "gitignore"
 else
-    msg_run "gitignore_global" "ln -s $HOME/.dotfiles/git/.gitignore_global $HOME/.gitignore_global"
-    ln -s $HOME/.dotfiles/git/.gitignore_global $HOME/.gitignore_global
+    msg_run "gitignore" "ln -s $HOME/.dotfiles/git/.gitignore $HOME/.gitignore"
+    ln -s $HOME/.dotfiles/git/.gitignore $HOME/.gitignore
 fi
