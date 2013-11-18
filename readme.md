@@ -33,4 +33,9 @@ To install the softwares, just run `curl -sS https://raw.github.com/luisdalmolin
 
 ### References
 
-* https://github.com/zenorocha/dotfiles
+* [Holman Dotfiles](https://github.com/holman/dotfiles)
+* [Zeno Rocha Dotfiles](https://github.com/zenorocha/dotfiles)
+
+### License
+
+[MIT License](http://luisdalmolin.mit-license.org/) © Luis Dalmolin
