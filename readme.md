@@ -3,7 +3,7 @@
 ## How to install?
 
 ```sh
-$ curl -L https://raw.github.com/zenorocha/dotfiles/master/bootstrap.sh | sh
+$ curl -L https://raw.github.com/luisdalmolin/dotfiles/master/bootstrap.sh | sh
 ```
 
 This will clone this repository and symlink the appropriate files in `~/.dotfiles` to your home directory.
