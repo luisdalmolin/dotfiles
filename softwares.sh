@@ -23,3 +23,5 @@ brew cask install mou
 brew cask install skype
 brew cask install u-torrent
 brew cask install evernote
+brew cask install vlc
+brew cask install the-unarchiver
