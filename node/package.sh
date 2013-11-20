@@ -40,3 +40,11 @@ else
     msg_run "coffee-script" "sudo npm install -g coffee-script"
     sudo npm install -g coffee-script
 fi
+
+# -- Coffeescript --------------------------------------------------------------------
+if which uglifyjs &> /dev/null; then
+    msg_ok "uglify-js"
+else
+    msg_run "uglify-js" "sudo npm install -g uglify-js"
+    sudo npm install -g uglify-js
+fi
