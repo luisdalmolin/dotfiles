@@ -14,6 +14,10 @@ else
     # -- PHP MCrypt
     msg_run "php" "brew install php55-mcrypt"
     brew install php55-mcrypt
+
+    # -- PHP XDebug
+    msg_run "php" "brew install php55-xdebug"
+    brew install php55-xdebug
 fi
 
 # -- Composer -----------------------------------------------------------------------
