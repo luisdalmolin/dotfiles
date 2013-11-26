@@ -9,9 +9,6 @@ else
     brew install zsh
 fi
 
-# Setting ZSH as your default shell
-chsh -s /bin/zsh
-
 # -- ZSH Config ----------------------------------------------------------------
 if [[ -d "$HOME/.zshrc" || -L "$HOME/.zshrc" ]]; then
     msg_ok "zshrc"
@@ -26,4 +23,12 @@ if [[ -d "$HOME/.oh-my-zsh" ]]; then
 else
     msg_run "oh-my-zsh" "git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh"
     git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+fi
+
+# -- .vimrc ----------------------------------------------------------------
+if [[ -d "$HOME/.vimrc" || -L "$HOME/.vimrc" ]]; then
+    msg_ok "vimrc"
+else
+    msg_run "vimrc" "ln -s $HOME/.dotfiles/zsh/.vimrc $HOME/.vimrc"
+    ln -s $HOME/.dotfiles/zsh/.vimrc $HOME/.vimrc
 fi
