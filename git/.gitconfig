@@ -8,7 +8,7 @@
 
     # Commit
     cm = commit -m
-    ca = commit --amend -m
+    ca = commit -am
 
     # Checkout
     co = checkout
