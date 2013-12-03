@@ -11,7 +11,7 @@ ZSH_THEME="robbyrussell"
 alias zshconfig="subl ~/.zshrc"
 alias editHosts="sudo vim /etc/hosts"
 alias editVHosts="sudo vim /etc/apache2/extra/httpd-vhosts.conf"
-alias artisan="php artisan"
+alias artisan="php artisan --env=local"
 alias deploy="git push origin master; git push deploy master"
 alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy && echo 'Public key copied'"
 
