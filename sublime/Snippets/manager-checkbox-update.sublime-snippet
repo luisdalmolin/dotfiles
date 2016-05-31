@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<input type="checkbox" data-id="{{ \$${1:banner}->id }}" data-manager-update-checkbox="${2:active}" data-manager-update-url="{{ route('manager.${3:banners}.${4:banners}', \$${1:banner}->id) }}" {{ \$${1:banner}->${2:active} ? 'checked="checked"' : null }}>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager-checkbox-update</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

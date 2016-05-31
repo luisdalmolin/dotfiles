@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+<?php 
+
+namespace ${1:App}\Repositories;
+
+use ${1:App}\Models\\${2:Model};
+use EscapeWork\LaravelSteroids\Repository;
+
+class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Repository
+{
+
+    public function __construct(${2:Model} \$model)
+    {
+        \$this->model = \$model;
+    }
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>laravelrepository</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.php</scope> -->
+</snippet>
