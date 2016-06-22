@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+<?php
+
+namespace ${1:App}\Collections;
+
+use EscapeWork\LaravelSteroids\Collection;
+
+class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Collection
+{
+
+    public function ${2:method}()
+    {
+    	${3}
+    }
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>laravel-collection</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

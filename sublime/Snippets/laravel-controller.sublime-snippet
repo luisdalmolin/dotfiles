@@ -1,0 +1,21 @@
+<snippet>
+    <content><![CDATA[
+<?php
+
+namespace ${1:App}\Http\Controllers\\${2:App};
+
+class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Controller
+{
+
+    public function index()
+    {
+        ${3}
+    }
+}
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>laravel-controller</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.php</scope> -->
+</snippet>

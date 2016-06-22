@@ -1,13 +1,10 @@
 <snippet>
 	<content><![CDATA[
-/*
-|--------------------------------------------------------------------------
-| ${1}
-|--------------------------------------------------------------------------
-*/
+\$table->foreign('${1:user_id}')->references('${2:id}')->on('${3:users}')
+      ->onUpdate('${4:cascade}')->onDelete('${4:cascade}');
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>laravelcomment</tabTrigger>
+	<tabTrigger>migration-foreign</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.php</scope>
 </snippet>

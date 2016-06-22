@@ -1,0 +1,30 @@
+<snippet>
+    <content><![CDATA[
+<?php
+
+namespace ${1:App}\Models;
+
+use EscapeWork\LaravelSteroids\Model;
+
+class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Model
+{
+
+    /**
+     * Table
+     */
+    protected \$table = '${2:table}';
+
+    /**
+     * Fillable fields
+     */
+    protected \$fillable = [
+        'title',
+    ];
+}
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>laravel-model</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.php</scope> -->
+</snippet>

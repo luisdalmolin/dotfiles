@@ -17,7 +17,7 @@ class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Repository
 }
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>laravelrepository</tabTrigger>
+    <tabTrigger>laravel-repository</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.php</scope> -->
 </snippet>
