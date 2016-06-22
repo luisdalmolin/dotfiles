@@ -29,8 +29,10 @@ class EscapeWorkValetDriver extends ValetDriver
      */
     public function isStaticFile($sitePath, $siteName, $uri)
     {
-        if (file_exists($staticFilePath = $sitePath.'/public/'.$uri)) {
-            return $staticFilePath;
+        $staticPath = $sitePath.'/'.$uri;
+
+        if (file_exists($staticPath)) {
+            return $staticPath;
         }
 
         return false;
@@ -46,6 +48,10 @@ class EscapeWorkValetDriver extends ValetDriver
      */
     public function frontControllerPath($sitePath, $siteName, $uri)
     {
-        return $sitePath.'/index.php';
+        if (count(explode('.', $uri)) === 1) {
+            return $sitePath.'/index.php';
+        }
+
+        return strpos($uri, '.php') ? $sitePath.$uri : $sitePath.$uri.'.php';
     }
 }
