@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+<div class="form-group">
+    <label for="${1:content}" class="control-label col-sm-2">${2:Conteúdo}</label>
+
+    <div class="col-sm-9">
+        <textarea name="${1:content}" class="hide">{!! \$${3:news}->${1:content} !!}</textarea>
+        <div class="editor" data-editor data-editor-with-medias data-name="${1:content}"></div>
+    </div><!-- .col-sm-8 -->
+</div><!-- .form-group -->
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager-textarea-editor</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js</scope> -->
+</snippet>

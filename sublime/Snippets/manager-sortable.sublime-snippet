@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+<tbody data-manager-sortable>
+    @foreach (\$${1:banners} as \$${2:banner})
+        <tr data-id="{{ \$${2:banner}->id }}" data-manager-sortable-url="{{ route('manager.${3:banners}.updateBasic', \$${2:banner}->id) }}">
+            <td style="text-align: center; cursor: move; vertical-align: middle;" title="Arraste para alterar a ordem"><span class="glyphicon glyphicon-move"></span></td>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager-sortable</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
-window.App = window.App || {};
+static::addGlobalScope(new SortableScope('order'));
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>window-app</tabTrigger>
+	<tabTrigger>eloquent-global-scope</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.js</scope>
+	<scope>source.php</scope>
 </snippet>

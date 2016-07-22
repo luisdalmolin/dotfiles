@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+<div class="form-group">
+	<label class="control-label col-md-2">${1:Label}</label>
+
+	<div class="col-md-${2:8}">
+		${3}
+	</div><!-- .col-md-${2:8} -->
+</div><!-- .form-group -->
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>form-group</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js</scope> -->
+</snippet>

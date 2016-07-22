@@ -1,9 +1,12 @@
 <snippet>
 	<content><![CDATA[
-window.App = window.App || {};
+public function ${1:client}()
+{
+    return \$this->belongsTo('${2:App}\Models\${3:Client}', '${4:client}_id');
+}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>window-app</tabTrigger>
+	<tabTrigger>eloquent-belongs-to</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.js</scope>
+	<scope>source.php</scope>
 </snippet>

@@ -1,9 +1,11 @@
 <snippet>
 	<content><![CDATA[
-window.App = window.App || {};
+@media screen and (max-width: \$site-width-sm) {
+    ${1}
+}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>window-app</tabTrigger>
+	<tabTrigger>media-mobile</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.js</scope>
+	<!-- <scope>source.js</scope> -->
 </snippet>

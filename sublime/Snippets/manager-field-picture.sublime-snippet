@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+<div class="form-group">
+    <label for="${3:banner}" class="control-label col-sm-2">${1:Imagem}</label>
+
+    <div class="col-sm-4">
+        <input type="file" name="${3:banner}" id="${3:banner}" class="form-control">
+
+        <span class="help-block">Apenas imagens do tipo <strong>jpg</strong> ou <strong>png</strong> são aceitas.</span>
+
+        @if (\$${2:banner}->${3:banner})
+            <span class="help-block">Apenas selecione se for alterar.</span>
+        @endif
+    </div><!-- .col-sm-4 -->
+
+    <div class="col-sm-4">
+        @if (\$${2:banner}->${3:banner})
+            <h4>Imagem atual</h4>
+
+            <img src="{{ \$${2:banner}->present->${3:banner}(100, 50) }}" alt="">
+        @endif
+    </div><!-- .col-sm-4 -->
+</div><!-- .form-group -->
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager-field-picture</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>
