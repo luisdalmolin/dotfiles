@@ -1,9 +1,7 @@
 <?php
 
-class EscapeWorkValetDriver extends ValetDriver
+class EscapeWorkValetDriver extends BasicValetDriver
 {
-    private $site_folder = '/';
-
     /**
      * Determine if the driver serves the request.
      *
@@ -31,7 +29,11 @@ class EscapeWorkValetDriver extends ValetDriver
      */
     public function isStaticFile($sitePath, $siteName, $uri)
     {
-        if (file_exists($staticFilePath = $sitePath.$this->site_folder.$uri)) {
+        if (file_exists($staticFilePath = $sitePath.$uri.'/index.php')) {
+            return false;
+        }
+
+        if (file_exists($staticFilePath = $sitePath.$uri)) {
             return $staticFilePath;
         }
 
@@ -48,12 +50,27 @@ class EscapeWorkValetDriver extends ValetDriver
      */
     public function frontControllerPath($sitePath, $siteName, $uri)
     {
-        $path = $sitePath.$this->site_folder;
+        $_SERVER['PHP_SELF']    = $uri;
+        $_SERVER['SERVER_ADDR'] = '127.0.0.1';
+        $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+        
+        return parent::frontControllerPath(
+            $sitePath, $siteName, $this->forceTrailingSlash($uri)
+        );
+    }
 
-        if ($uri == '/')return $path.'/index.php';
+    /**
+     * Redirect to uri with trailing slash.
+     *
+     * @param  string $uri
+     * @return string
+     */
+    private function forceTrailingSlash($uri)
+    {
+        if (substr($uri, -1 * strlen('/wp-admin')) == '/wp-admin') {
+            header('Location: '.$uri.'/'); die;
+        }
 
-        return strpos($uri, '.php')
-                    ? $path.$uri
-                    : $path.$uri.'.php';
+        return $uri;
     }
 }
