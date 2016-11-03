@@ -1,12 +1,14 @@
 <snippet>
 	<content><![CDATA[
-public function ${1:client}()
-{
-    return \$this->belongsTo('${2:App}\Models\\${3:Client}', '${4:client}_id');
-}
+/**
+ * Appends
+ */
+protected \$appends = [
+    '${1:expire_at}',
+];
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>eloquent-belongs-to</tabTrigger>
+	<tabTrigger>eloquent-appends</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.php</scope>
 </snippet>

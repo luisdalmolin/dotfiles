@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+@section('seo')
+    @include('app.inc.seo', [
+        'title'       => '${1:Título}',
+        'description' => '${2:Descrição}',
+        'route'       => route('${3:route}'),
+    ])
+@stop
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>blade-seo</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

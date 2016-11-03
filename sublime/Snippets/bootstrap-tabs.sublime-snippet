@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+<div>
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#${1:home}" aria-controls="${1:home}" role="tab" data-toggle="tab">Home</a></li>
+		<li role="presentation"><a href="#${2:profile}" aria-controls="${2:profile}" role="tab" data-toggle="tab">Profile</a></li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="${1:home}">
+
+		</div>
+
+		<div role="tabpanel" class="tab-pane" id="${2:profile}">
+
+		</div>
+	</div>
+</div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bootstrap-tabs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

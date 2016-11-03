@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+#!/bin/sh
+
+GIT_WORK_TREE=/home/${1:ftp_user}/apps/${2:directory} git checkout -f
+cd /home/${1:ftp_user}/apps/${2:directory}
+#/usr/bin/php56 artisan clear-compiled
+#/usr/bin/php56 artisan optimize
+#/usr/bin/php56 artisan migrate --force
+#/usr/bin/php56 artisan asset:dist
+#/usr/bin/php56 artisan config:cache
+#/usr/bin/php56 artisan route:cache
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>post-receive</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js</scope> -->
+</snippet>

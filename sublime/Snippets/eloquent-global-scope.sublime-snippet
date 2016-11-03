@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-static::addGlobalScope(new SortableScope('order'));
+static::addGlobalScope(new ${1:SortableScope}('order'));
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>eloquent-global-scope</tabTrigger>

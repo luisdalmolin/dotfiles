@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+<div class="form-group">
+    <label for="${1:price}" class="control-label col-sm-2">Preço</label>
+
+    <div class="col-sm-8">
+        <div class="input-group">
+            <span class="input-group-addon">R$</span>
+            <input type="text" name="${1:price}" id="${1:price}" class="form-control" value="{{ \$${2:product}->present->price }}" maxlength="255" data-money required>
+        </div>
+    </div><!-- .col-sm-8 -->
+</div><!-- .form-group -->
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager-field-price</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

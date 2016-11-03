@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+<form action="{{ route('manager.${1:products}.index') }}" class="form-inline well">
+    <input type="text" name="title" class="form-control" value="{{ request('title') }}" placeholder="Busca por nome da categoria..." maxlength="255" autofocus>
+
+    <button type="submit" class="btn btn-primary">Filtrar</button>
+    <a href="{{ route('manager.${1:products}.index') }}" class="btn btn-default">Limpar filtros</a>
+</form>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager-search</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

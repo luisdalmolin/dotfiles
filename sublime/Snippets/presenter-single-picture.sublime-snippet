@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+public function ${1:cover}(\$w = 500, \$h = 200, \$fit = 'fit')
+{
+    if (\$${1:cover} = \$this->model->${1:cover}) {
+        return asset('medias/${2:posts}/' . \$${1:cover} . '?w=' . \$w . '&h=' . \$h . '&fit=' . \$fit);
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>presenter-single-picture</tabTrigger> 
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

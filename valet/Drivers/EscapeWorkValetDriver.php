@@ -2,6 +2,8 @@
 
 class EscapeWorkValetDriver extends ValetDriver
 {
+    private $site_folder = '/';
+
     /**
      * Determine if the driver serves the request.
      *
@@ -18,7 +20,7 @@ class EscapeWorkValetDriver extends ValetDriver
 
         return false;
     }
-
+    
     /**
      * Determine if the incoming request is for a static file.
      *
@@ -29,10 +31,8 @@ class EscapeWorkValetDriver extends ValetDriver
      */
     public function isStaticFile($sitePath, $siteName, $uri)
     {
-        $staticPath = $sitePath.'/'.$uri;
-
-        if (file_exists($staticPath)) {
-            return $staticPath;
+        if (file_exists($staticFilePath = $sitePath.$this->site_folder.$uri)) {
+            return $staticFilePath;
         }
 
         return false;
@@ -48,10 +48,12 @@ class EscapeWorkValetDriver extends ValetDriver
      */
     public function frontControllerPath($sitePath, $siteName, $uri)
     {
-        if (count(explode('.', $uri)) === 1) {
-            return $sitePath.'/index.php';
-        }
+        $path = $sitePath.$this->site_folder;
 
-        return strpos($uri, '.php') ? $sitePath.$uri : $sitePath.$uri.'.php';
+        if ($uri == '/')return $path.'/index.php';
+
+        return strpos($uri, '.php')
+                    ? $path.$uri
+                    : $path.$uri.'.php';
     }
 }

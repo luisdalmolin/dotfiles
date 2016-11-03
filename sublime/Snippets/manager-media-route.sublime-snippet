@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+<a href="{{ route('manager.medias.index', ['${1:news}', \$${2:new}->id]) }}" class="btn btn-default" title="Fotos">
+    <span class="glyphicon glyphicon-camera"></span> fotos
+</a>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager-media-route</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js</scope> -->
+</snippet>

@@ -1,12 +1,11 @@
 <snippet>
 	<content><![CDATA[
-public function ${1:client}()
-{
-    return \$this->belongsTo('${2:App}\Models\\${3:Client}', '${4:client}_id');
-}
+return Cache::rememberForever('${1:collection.active}', function() {
+    return \$this->model->${2};
+});
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>eloquent-belongs-to</tabTrigger>
+	<tabTrigger>repository-get-cache</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.php</scope>
 </snippet>

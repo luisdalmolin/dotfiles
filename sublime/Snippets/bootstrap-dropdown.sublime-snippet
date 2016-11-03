@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+<li class="dropdown {{ in_array(\$page, ['${1}']) ? 'active' : null }}">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        ${2:Menu} <span class="caret"></span>
+    </a>
+
+    <ul class="dropdown-menu">
+        
+    </ul>
+</li><!-- .dropdown -->
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bootstrap-dropdown</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.php</scope> -->
+</snippet>

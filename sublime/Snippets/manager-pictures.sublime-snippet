@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+@if (! \$${1:job}->exists)
+    <div class="form-group">
+        <label class="control-label col-md-2">Imagens</label>
+
+        <div class="col-md-8">
+            <input type="file" class="form-control" name="pictures[]" multiple>
+        </div><!-- .col-md-8 -->
+    </div><!-- .form-group -->
+@endif
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager-pictures</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js</scope> -->
+</snippet>

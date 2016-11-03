@@ -8,7 +8,6 @@ use EscapeWork\LaravelSteroids\Model;
 
 class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Model
 {
-
     /**
      * Table
      */

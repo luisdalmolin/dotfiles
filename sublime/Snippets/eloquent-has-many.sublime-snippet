@@ -2,7 +2,7 @@
 	<content><![CDATA[
 public function ${1:products}()
 {
-    return \$this->hasMany('${2:App}\Models\\${3:Product}', '${4:category_id}');
+    return \$this->hasMany('App\\${2:Models}\\${3:Product}', '${4:category}_id');
 }
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

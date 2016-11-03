@@ -1,12 +1,14 @@
 <snippet>
 	<content><![CDATA[
-public function ${1:client}()
+public function picture(\$w = 105, \$h = 75, \$fit = 'resize')
 {
-    return \$this->belongsTo('${2:App}\Models\\${3:Client}', '${4:client}_id');
+    if (\$media = \$this->model->medias->first()) {
+        return \$media->present->picture(\$w, \$h, \$fit);
+    }
 }
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>eloquent-belongs-to</tabTrigger>
+	<tabTrigger>presenter-media-picture</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.php</scope>
 </snippet>
