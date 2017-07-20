@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+public function upload${1:File}(\$${2:file})
+{
+    \$uploader = app('EscapeWork\LaravelSteroids\Upload');
+    \$filename = \$uploader->to('${3:downloads}')
+                          ->execute(\$${2:file});
+
+    \$this->${2:file} = \$filename;
+    \$this->save();
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eloquent-upload-file</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

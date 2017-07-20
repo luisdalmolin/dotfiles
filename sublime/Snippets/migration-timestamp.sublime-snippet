@@ -1,12 +1,10 @@
 <snippet>
 	<content><![CDATA[
-public function scope${1}(\$query)
-{
-    return \$query->where('${2:active}', '${3:=}', '${4:1}');
-}
+\$table->boolean('${1:active}')->default(${2:1});
+\$table->timestamp('${1:last_login_at}')->nullable()->default(null)->after('${2:remember_token}');
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>eloquent-scope</tabTrigger>
+	<tabTrigger>migration-timestamp</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.php</scope>
 </snippet>

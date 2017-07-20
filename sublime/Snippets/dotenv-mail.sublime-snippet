@@ -1,13 +1,11 @@
 <snippet>
 	<content><![CDATA[
 MAIL_DRIVER=smtp
-#MAIL_DRIVER=log
 MAIL_HOST=mailtrap.io
 MAIL_PORT=465
 MAIL_USERNAME=997445cf92d465
 MAIL_PASSWORD=a13340c07acdd5
 MAIL_ENCRYPTION=tls
-MAIL_TO=luis@escape.ppg.br
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>dotenv-mail</tabTrigger>

@@ -8,7 +8,10 @@ use EscapeWork\LaravelSteroids\Presenter;
 
 class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Presenter
 {
-	${2}
+	public function created_at(\$format = 'd/m/Y')
+    {
+        return \$this->model->created_at->format(\$format);
+    }
 }
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

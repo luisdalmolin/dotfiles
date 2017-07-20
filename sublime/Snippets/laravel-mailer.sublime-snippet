@@ -1,0 +1,43 @@
+<snippet>
+    <content><![CDATA[
+<?php
+
+namespace App\\${2:Mail};
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
+class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return \$this->markdown('emails.contact')
+                    ->subject('Nova mensagem de contato do site');
+    }
+}
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>laravel-mailer</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>text.php</scope> -->
+</snippet>

@@ -1,7 +1,9 @@
 <?php
 
-class EscapeWorkValetDriver extends BasicValetDriver
+class EscapeWorkValetDriver extends ValetDriver
 {
+    private $site_folder = '';
+
     /**
      * Determine if the driver serves the request.
      *
@@ -29,11 +31,7 @@ class EscapeWorkValetDriver extends BasicValetDriver
      */
     public function isStaticFile($sitePath, $siteName, $uri)
     {
-        if (file_exists($staticFilePath = $sitePath.$uri.'/index.php')) {
-            return false;
-        }
-
-        if (file_exists($staticFilePath = $sitePath.$uri)) {
+        if (file_exists($staticFilePath = $sitePath.$this->site_folder.$uri)) {
             return $staticFilePath;
         }
 
@@ -50,27 +48,29 @@ class EscapeWorkValetDriver extends BasicValetDriver
      */
     public function frontControllerPath($sitePath, $siteName, $uri)
     {
-        $_SERVER['PHP_SELF']    = $uri;
-        $_SERVER['SERVER_ADDR'] = '127.0.0.1';
-        $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
-        
-        return parent::frontControllerPath(
-            $sitePath, $siteName, $this->forceTrailingSlash($uri)
-        );
-    }
+        $path = $sitePath.$this->site_folder;
 
-    /**
-     * Redirect to uri with trailing slash.
-     *
-     * @param  string $uri
-     * @return string
-     */
-    private function forceTrailingSlash($uri)
-    {
-        if (substr($uri, -1 * strlen('/wp-admin')) == '/wp-admin') {
-            header('Location: '.$uri.'/'); die;
+        if ($uri == '/_css/css/_css.php') {
+            return $path.$uri;
         }
 
-        return $uri;
+        if ($uri == '/') {
+            return $path.'/index.php';
+        }
+
+        if ($uri == '/gerenciador') {
+            return $path.'/gerenciador/index.php';
+        }
+
+        if (strpos($uri, '.php')) {
+            $uris = explode('/', $uri);
+            $file = array_pop($uris);
+            
+            $_SERVER['SCRIPT_FILENAME'] = implode('/', $uris) . '/' . $file;
+        }
+
+        return strpos($uri, 'gerenciador')
+                    ? $path.$uri
+                    : $path.'/index.php';
     }
 }

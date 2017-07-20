@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+<?php
+
+namespace ${1:App\Notifications};
+
+use Illuminate\Notifications\Notification;
+use Illuminate\Notifications\Messages\MailMessage;
+
+class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Notification
+{
+    /**
+     * Build the mail representation of the notification.
+     *
+     * @return \Illuminate\Notifications\Messages\MailMessage
+     */
+    public function toMail(\$notifiable)
+    {
+        \$data  = [
+            
+        ];
+
+        return (new MailMessage)
+            ->view('', \$data)
+            ->subject('subject');
+    }
+
+    public function toArray(\$notifiable)
+    {
+        return [];
+    }
+}
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>laravel-notification</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.scss</scope> -->
+</snippet>

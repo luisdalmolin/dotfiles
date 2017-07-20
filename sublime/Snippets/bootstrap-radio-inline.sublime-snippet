@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+<label class="radio-inline">
+    <input type="radio" name="${1:active}" value="${2:1}" {!! \$${3:product}->${1:active} == ${2:1} ? 'checked="checked"' : null !!}'>
+    ${4}
+</label>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>bootstra-radio-inline</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>text.vue</scope> -->
+</snippet>

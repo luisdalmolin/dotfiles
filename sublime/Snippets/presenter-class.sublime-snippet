@@ -3,7 +3,7 @@
 /**
  * Presenter
  */
-protected \$presenter = '${1:App}\Presenters\\${TM_FILENAME/(.*)[.](.*)/$1/g}Presenter';
+protected \$presenter = ${1:${TM_FILENAME/(.*)[.](.*)/$1/g}Presenter::class};
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>presenter-class</tabTrigger>

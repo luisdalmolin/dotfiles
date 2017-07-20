@@ -2,6 +2,7 @@
 	<content><![CDATA[
 \$('.${2:js-btn}').on('${3:click}', function(e) {
     ${4:e.preventDefault();}
+    ${5}
 });
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

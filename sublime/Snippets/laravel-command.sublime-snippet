@@ -1,0 +1,51 @@
+<snippet>
+	<content><![CDATA[
+<?php
+
+namespace ${1:App\Console\Commands};
+
+use Illuminate\Console\Command;
+
+class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected \$signature = '${2:command}';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected \$description = '${3:description}';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        ${4}
+    }
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>laravel-command</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.scss</scope> -->
+</snippet>

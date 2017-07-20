@@ -4,9 +4,9 @@
 
 namespace ${1:App}\Http\Requests;
 
-use ${1:App}\Http\Requests\Request;
+use Illuminate\Foundation\Http\FormRequest;
 
-class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends Request
+class ${TM_FILENAME/(.*)[.](.*)/$1/g} extends FormRequest
 {
 
     public function authorize()

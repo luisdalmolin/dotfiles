@@ -1,11 +1,14 @@
 <snippet>
 	<content><![CDATA[
-\$('.${2:js-btn}').on('${3:click}', function(e) {
-    ${4:e.preventDefault();}
-});
+/**
+ * Appends
+ */
+protected \$casts = [
+    '${1:date}' => '${2:date}',
+];
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>jquery-on</tabTrigger>
+	<tabTrigger>eloquent-casts</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<scope>source.js</scope>
+	<scope>source.php</scope>
 </snippet>
